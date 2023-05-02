@@ -1,0 +1,20 @@
+comments:
+if statement:
+
+if (some_statement) {
+  some result/behavior
+} else if (another_condition) {
+  some different result/behavior
+} else {
+  final result if nothing else gets met
+}
+
+comments:
+  HTML: 
+    start: <!-- end: -->
+  CSS:
+    start: /**/ end: /**/
+  JS:
+    start: /**/ end: /**/
+    single-line: //
+

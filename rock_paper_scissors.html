@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock Paper Scissor</title>
+    <style>
+    </style>
+  </head>
+  <body>
+    <p>Rock Paper Scissor</p>
+    <button onclick = "
+      const random_number = Math.random();
+
+      let computer_move = '';
+
+      let winner = '';
+
+      if (random_number <= 0.333) {
+        computer_move = 'rock';
+      } else if (random_number <= 0.666) {
+        computer_move = 'paper';
+      } else {
+        computer_move = 'scissor';
+      }
+
+      console.log(computer_move);
+
+      if (computer_move == 'rock') {
+        winner = 'tie';
+      } else if (computer_move == 'paper') {
+        winner = 'computer';
+      } else {
+        winner = 'you';
+      }
+
+      let result = `The winner is ${winner}.`;
+
+      alert(`you picked rock. computer picked ${computer_move}. ${result}`);
+    ">Rock</button>
+
+    <button onclick = "
+      const random_number = Math.random();
+
+      let computer_move = '';
+
+      let winner = '';
+
+      if (random_number <= 0.333) {
+        computer_move = 'rock';
+      } else if (random_number <= 0.666) {
+        computer_move = 'paper';
+      } else {
+        computer_move = 'scissor';
+      }
+
+      console.log(computer_move);
+
+      if (computer_move == 'rock') {
+        winner = 'tie';
+      } else if (computer_move == 'paper') {
+        winner = 'computer';
+      } else {
+        winner = 'you';
+      }
+
+      let result = `The winner is ${winner}.`;
+
+      alert(`you picked paper. computer picked ${computer_move}. ${result}`);
+
+    ">Paper</button>
+
+    <button onclick = "
+
+      ">Scissor</button>
+
+    <p>Click here to see the final version of the project.</p>
+
+    <script>
+      
+    </script>
+  </body>
+</html>
