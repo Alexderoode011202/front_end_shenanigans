@@ -14,7 +14,7 @@ comments:
   CSS:
     start: /**/ end: /**/
   JS:
-    start: /**/ end: /**/
+    start: /* end: */
     single-line: //
 
 scope:

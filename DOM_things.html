@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>DOM</title>
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <button>howdy!</button>
+    <button class="another_button">another howdy...</button>
+
+    <script>
+      console.log(document.querySelector('button'));
+      document.querySelector('button').innerHTML = 'I have no clue what this is';
+
+      const some_button_EL = document.querySelector('.another_button');
+      console.log(some_button_EL);
+      
+
+      /*
+      document.body.innerHTML = 'I have no clue what I am doing';
+      document.title = 'Good job!';
+      */
+
+      /*
+     document.title = 'Changed';
+
+     console.log(document.body);
+     console.log(typeof document.body);
+     console.log('------');
+     console.log(document.body.innerHTML);
+
+     document.body.innerHTML = "<button>Good Job!</button>";
+
+     console.log(document.body.innerHTML)
+     */
+    </script>
+  </body>
+</html>
