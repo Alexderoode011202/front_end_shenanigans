@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <!--Weird boolean stuff going on here-->
+    <script>
+      // turnary operator:
+      let some_other_var = 0;
+      some_other_var = false ? 'truthy' : 'falsy';
+      console.log(some_other_var);
+      alert(`the value is: ${some_other_var}`);
+
+      // guard operator:
+      some_other_var = 1;
+      some_other_var && console.log('some other var is truthy');
+
+      let new_var;
+      new_var = some_other_var && 'I hate my life.';
+      console.log(new_var);
+
+    </script>
+  </body>
+</html>

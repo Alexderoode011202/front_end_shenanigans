@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <!-- all the widgets-->
+
+    <p>Rock Paper Scissor</p>
+    <button class = "rock-button" onclick = "
+        // let computer choose random random number 
+        const rand = Math.random()
+        let comp_choice = ''
+        let winner = ''
+        // convert random number to choice
+        if (rand <0.333) {
+          comp_choice = 'Rock'
+        } else if (0.333 <= rand && rand <=0.666) {
+          comp_choice = 'Paper'
+        } else {
+          comp_choice = 'Scissor'
+        }
+
+        // decide whether player has won or not
+        if (comp_choice === 'Rock') {
+          winner = 'no one. It is a tie'
+        } else if (comp_choice === 'Paper') {
+          winner = 'the computer.'
+        } else {
+          winner = 'you.'
+        }
+
+        // display message in console
+        console.log(`computer choice: ${comp_choice}`)
+        console.log(`The winner is ${winner}`)
+      ">Rock</button>
+
+
+      <button class = "paper-button" onclick = "
+              // let computer choose random random number 
+        const rand = Math.random();
+        let comp_choice = '';
+        let winner = '';
+        // convert random number to choice
+        if (rand <0.333) {
+          comp_choice = 'Rock';
+        } else if (0.333 <= rand && rand <=0.666) {
+          comp_choice = 'Paper';
+        } else {
+          comp_choice = 'Scissor';
+        }
+
+        // decide whether player has won or not
+        if (comp_choice === 'Rock') {
+          winner = 'you.';
+        } else if (comp_choice === 'Paper') {
+          winner = 'no one. It is a tie.';
+        } else {
+          winner = 'the computer.';
+        }
+
+        // display message in console
+        console.log(`computer choice: ${comp_choice}`);
+        console.log(`The winner is ${winner}`);
+      ">Paper</button>
+    <script>
+
+    </script>
+  </body>
+</html>
