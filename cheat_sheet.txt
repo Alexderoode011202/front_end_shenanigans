@@ -18,3 +18,21 @@ comments:
     single-line: //
 
 scope:
+everything WITHIN BRACKETS, stay WITHIN BRACKETS
+
+empty html file format:
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <script>
+      
+    </script>
+  </body>
+</html>
+
