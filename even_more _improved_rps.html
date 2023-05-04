@@ -19,8 +19,19 @@
     <button onclick =  "player_choice('Scissor', Math.random());">
       Scissor
     </button>
+    <button onclick= "
+    score.wins = 0;
+    score.losses= 0;
+    score.ties = 0;
+    ">Reset Score</button>
 
     <script>
+      const score = {
+        wins: 0,
+        losses: 0,
+        ties: 0
+      };
+
       function player_choice(p_input, c_input) {
         let def_c_input;
         let winner;
@@ -37,15 +48,18 @@
         // check who wins
         if (def_c_input === p_input) {
           winner = 'no one. It is a tie';
+          score.ties += 1;
         } else if ((def_c_input === 'Rock' && p_input === 'Scissor') || (def_c_input === 'Paper' && p_input === 'Rock') || (def_c_input === 'Scissor' && p_input === 'Paper')) {
-          winner = 'the computer'; 
+          winner = 'the computer';
+          score.losses += 1;
         } else {
           winner = 'you';
+          score.wins += 1;
         }
 
         // notify the player
-        alert(`The winner is ${winner}.`);
-        console.log(`The winner is ${winner}.`);
+        alert(`The winner is ${winner}. The score is:[wins: ${score.wins}, losses: ${score.losses}, ties: ${score.ties}]`);
+        // console.log(`The winner is ${winner}. and the score is ${score}`);
         return undefined
       }
       

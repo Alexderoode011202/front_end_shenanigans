@@ -36,3 +36,5 @@ empty html file format:
   </body>
 </html>
 
+how to check datatype:
+use -> typeof some_var
