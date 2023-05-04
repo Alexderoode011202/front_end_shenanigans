@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <button onclick = "pressed()">press me</button>
+    <script>
+      let some_var = 0
+      function pressed() {
+        some_var = JSON.parse(localStorage.getItem('dumbass var'))
+        some_var +=1
+        console.log(some_var)
+        localStorage.setItem('dumbass var', JSON.stringify(some_var))
+        return undefined
+      }
+    </script>
+  </body>
+</html>

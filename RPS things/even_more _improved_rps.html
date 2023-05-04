@@ -20,13 +20,11 @@
       Scissor
     </button>
     <button onclick= "
-    score.wins = 0;
-    score.losses= 0;
-    score.ties = 0;
+    localStorage.removeItem('score')
     ">Reset Score</button>
 
     <script>
-      const score = {
+      let score = {
         wins: 0,
         losses: 0,
         ties: 0
@@ -35,6 +33,16 @@
       function player_choice(p_input, c_input) {
         let def_c_input;
         let winner;
+        // retrieve score
+
+        score = JSON.parse(localStorage.getItem('score'))
+        if (score === null) {
+          score = {
+            wins: 0,
+            losses: 0,
+            ties: 0
+          }
+        }
 
         // decide what c_input really is
         if (c_input <1/3) {
@@ -57,9 +65,16 @@
           score.wins += 1;
         }
 
-        // notify the player
-        alert(`The winner is ${winner}. The score is:[wins: ${score.wins}, losses: ${score.losses}, ties: ${score.ties}]`);
-        // console.log(`The winner is ${winner}. and the score is ${score}`);
+        // notify the player/declare the winner
+        // alert(`The winner is ${winner}. The score is:[wins: ${score.wins}, losses: ${score.losses}, ties: ${score.ties}]`);
+        console.log(`The winner is ${winner}. and the score is ${score}
+        `);
+        console.log(score);
+
+        // save the score
+        localStorage.setItem('score', JSON.stringify(score))
+
+
         return undefined
       }
       
