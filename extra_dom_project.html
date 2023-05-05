@@ -11,8 +11,21 @@
       subscribe_func()
       " class="js-subscribe-button"
       >Subscribed</button>
-    <p>Rock Paper Scissor</p>
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 =+$10 shipping.</p>
+    <p>Orders over $40 = FREE shipping.</p>
 
+    <input class="js-input" placeholder="cost of order", onkeydown = "
+      if (event.key == 'Enter') {
+        calculate_total();
+      } else {
+        return undefined
+      }
+      ">
+    <button onclick = " 
+      calculate_total();
+    ">Calculate</button>
+    <p class="results"></p>
     <script>
       function subscribe_func() {
         const the_button = document.querySelector('.js-subscribe-button');
@@ -23,6 +36,15 @@
           the_button.innerText = 'Subscribed';
         }
       }
+
+      function calculate_total() {
+        const input_val = document.querySelector('.js-input');
+        let cost = Number(input_val.value);
+        if (cost < 40) {
+          cost += 10
+        }
+        document.querySelector('.results').innerText = `$${cost}`
+          }
     </script>
   </body>
 </html>

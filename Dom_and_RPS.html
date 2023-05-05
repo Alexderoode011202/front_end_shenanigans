@@ -20,9 +20,11 @@
       Scissor
     </button>
     <p class = "js-score"></p>
+    <p class = "js-moves"></p>
     <button onclick= "
     localStorage.removeItem('score')
     ">Reset Score</button>
+
 
     <script>
       let score = JSON.parse(localStorage.getItem('score')) || {
@@ -32,6 +34,8 @@
       }
 
       document.querySelector('.js-score').innerHTML = `wins: ${score.wins}, losses: ${score.losses}, ties: ${score.ties}`;
+
+      document.querySelector()
 
       function player_choice(p_input, c_input) {
         let def_c_input;
@@ -78,6 +82,9 @@
         
         // update score element
         document.querySelector('.js-score').innerHTML = `wins: ${score.wins}, losses: ${score.losses}, ties: ${score.ties}`;
+
+        //update moves element
+        document.querySelector('.js-moves').innerHTML = `Player move: ${p_input} | CPU move: ${def_c_input}`
 
         return undefined
       }
