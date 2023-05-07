@@ -22,7 +22,10 @@ function second_add_todo () {
   let output = "";
 
   for (let index = 0;index < tasks_array.length;index +=1) {
-    output = output + `<p class = 'output-p'>${index+1}. ${tasks_array[index]}</p>`;
+    output = output + 
+    `<p class = 'output-p'>
+    ${tasks_array[index]} 
+    <button onclick = "tasks_array.splice(${index}, 1)">Delete</button></p>`;
     console.log(`test ${tasks_array}`)
   }
   console.log(`test: ${output}`)
@@ -30,4 +33,8 @@ function second_add_todo () {
   document.querySelector(".second_input").value = ""
 
   return undefined
+}
+
+function delete_element() {
+  // get element in question
 }
