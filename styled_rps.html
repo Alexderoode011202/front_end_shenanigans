@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Better Rock Paper Scissor Game</title>
+    <link 
+      rel = "stylesheet" 
+      href = "rps-styles.css">
+  </head>
+  <body>
+    <p class = "title" >rock paper scissor</p>
+    <button class = "move-button" onclick = "player_choice('Rock', Math.random())">
+    <img class = "move-icon" src = "media\rock-emoji.png"></button>
+
+    <button class = "move-button" onclick = "player_choice('Paper', Math.random())">
+    <img class = "move-icon" src = "media\rock-emoji.png"></button>
+
+    <button class = "move-button" onclick =  "player_choice('Scissor', Math.random());">
+    <img class = "move-icon" src = "media\paper-emoji.png"></button>
+    <p class = "js-result result"></p>
+    <p class = "js-score"></p>
+    <p class = "js-moves">you:
+      <img class = "result-icon" src = "media\rock-emoji.png">
+      <img class = "result-icon" src = "media\paper-emoji.png">
+      :computer
+    </p>
+    <button onclick= "
+    localStorage.removeItem('score')
+    ">Reset Score</button>
+
+
+    <script src = "10-rps.js">
+      
+    </script>
+  </body>
+</html>

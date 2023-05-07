@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <style>
+      body {
+        background-image: url("media/rock-emoji.png");
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        cursor:grab;
+        background-color: red;
+        
+
+      }
+    </style>
+  </head>
+  <body>
+    <div class = "js-todo-list">some thingies</div>
+    <h1>I am bored</h1>
+    <h2>I am not as bored</h2>
+    <h3>even smaller text</h3>
+    <h4>much smaller text</h4>
+    <h5>how tiny!</h5>
+    <h6>help</h6>
+    <script>
+
+      /*
+      let i = 1
+      while (i <10) {
+        console.log(i)
+        i += 1
+      }
+      
+      console.log('eat shit!')
+      */
+
+      const todolist = [
+        'make dinner',
+        'wash dishes',
+        'watch youtube'
+      ];
+
+      for (let index = 0; index <= todolist.length - 1; index+=1) {
+        console.log(todolist[index])
+      }
+    </script>
+  </body>
+</html>

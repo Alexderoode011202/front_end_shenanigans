@@ -1,0 +1,96 @@
+<html>
+  <head>
+    <title>DOM Projects</title>
+    <style>
+      body {
+        font-family : arial;
+      }
+
+      .subscribe-button {
+        border: none;
+        background-color: black;
+        color: white;
+        padding-top : 15px;
+        padding-left: 15px;
+        padding-bottom: 15px;
+        padding-right: 15px;
+        font-weight: bold;
+        border-radius: 50px;
+        cursor: pointer;
+        margin-bottom: 30px;
+      }
+
+      .is-subscribed {
+        background-color: rgb(240, 240, 240);;
+        color: black;
+      }
+
+      .cost-input {
+        font-size: 15px;
+        /*
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        */
+        padding: 10px
+      }
+
+      .calculate-button {
+        background-color: green;
+        padding: 11.5px 50px;
+        font-size: 15;
+        border: none;
+        color:white;
+        cursor: pointer;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <p>YouTube Subscribe Button</p>
+    <button onclick = "
+      subscribe_func()
+      " class="js-subscribe-button subscribe-button"
+      >Subscribed</button>
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 =+$10 shipping.</p>
+    <p>Orders over $40 = FREE shipping.</p>
+
+    <input class="js-input cost-input" placeholder="cost of order", onkeydown = "
+      if (event.key == 'Enter') {
+        calculate_total();
+      } else {
+        return undefined
+      }
+      ">
+    <button class = "calculate-button" onclick = " 
+      calculate_total();
+    ">Calculate</button>
+    <p class="results"></p>
+    <script>
+      function subscribe_func() {
+        const the_button = document.querySelector('.js-subscribe-button');
+
+        if (the_button.innerText === 'Subscribed') {
+          the_button.innerText = 'Subscribe';
+          the_button.classList.add("is-subscribed");
+          
+        } else {
+          the_button.innerText = 'Subscribed';
+          the_button.classList.remove('is-subscribed');
+          
+        }
+      }
+
+      function calculate_total() {
+        const input_val = document.querySelector('.js-input');
+        let cost = Number(input_val.value);
+        if (cost < 40) {
+          cost += 10
+        }
+        document.querySelector('.results').innerText = `$${cost}`
+          }
+    </script>
+  </body>
+</html>
